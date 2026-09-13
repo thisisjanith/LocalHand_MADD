@@ -1,8 +1,0 @@
-{
-  "permissions": {
-    "allow": [
-      "Bash(java -version)",
-      "Bash(JAVA_HOME=\"C:/Program Files/Android/Android Studio/jbr\" ./gradlew :app:dependencies --configuration debugRuntimeClasspath -q)"
-    ]
-  }
-}
