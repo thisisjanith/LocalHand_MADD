@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Inline screen header: an optional back arrow followed by the title. Ports
+  ui/components/Scaffolds.kt's ScreenHeader — set the title via
+  header_title.text, and hide header_back (visibility=GONE) on screens that
+  don't need it (SignUp passes an empty title and always shows the arrow).
+-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:gravity="center_vertical"
+    android:paddingTop="@dimen/lh_gap_small"
+    android:paddingBottom="@dimen/lh_gap_small">
+
+    <ImageButton
+        android:id="@+id/header_back"
+        android:layout_width="@dimen/lh_min_touch_target"
+        android:layout_height="@dimen/lh_min_touch_target"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:src="@drawable/ic_arrow_back"
+        android:contentDescription="Back"
+        android:scaleType="center" />
+
+    <TextView
+        android:id="@+id/header_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_marginStart="@dimen/lh_gap_tiny"
+        android:textAppearance="@style/Lh.Text.ScreenTitle"
+        tools:text="Favourites" />
+
+</LinearLayout>

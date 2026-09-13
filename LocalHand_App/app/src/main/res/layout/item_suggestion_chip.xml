@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/chip_text"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginEnd="@dimen/lh_gap_small"
+    android:background="@drawable/bg_pill_surface_border"
+    android:paddingStart="@dimen/lh_gap_large"
+    android:paddingEnd="@dimen/lh_gap_large"
+    android:paddingTop="@dimen/lh_gap_small"
+    android:paddingBottom="@dimen/lh_gap_small"
+    android:textAppearance="@style/Lh.Text.Label"
+    android:clickable="true"
+    android:focusable="true"
+    tools:text="How do I post a listing?" />

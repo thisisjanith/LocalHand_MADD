@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Screen titles: 22sp ExtraBold. -->
+    <style name="Lh.Text.ScreenTitle" parent="android:TextAppearance">
+        <item name="fontFamily">@font/jakarta_extrabold</item>
+        <item name="android:fontFamily">@font/jakarta_extrabold</item>
+        <item name="android:textSize">@dimen/lh_text_screen_title</item>
+        <item name="android:textColor">@color/lh_text</item>
+    </style>
+
+    <!-- Large onboarding headline. -->
+    <style name="Lh.Text.Headline" parent="android:TextAppearance">
+        <item name="fontFamily">@font/jakarta_extrabold</item>
+        <item name="android:fontFamily">@font/jakarta_extrabold</item>
+        <item name="android:textSize">@dimen/lh_text_headline</item>
+        <item name="android:textColor">@color/lh_text</item>
+    </style>
+
+    <!-- Wordmark / logo text. -->
+    <style name="Lh.Text.Wordmark" parent="android:TextAppearance">
+        <item name="fontFamily">@font/jakarta_extrabold</item>
+        <item name="android:fontFamily">@font/jakarta_extrabold</item>
+        <item name="android:textSize">@dimen/lh_text_wordmark</item>
+        <item name="android:textColor">@color/lh_text</item>
+    </style>
+
+    <!-- Section headings: 16sp Bold. -->
+    <style name="Lh.Text.SectionHeading" parent="android:TextAppearance">
+        <item name="fontFamily">@font/jakarta_bold</item>
+        <item name="android:fontFamily">@font/jakarta_bold</item>
+        <item name="android:textSize">@dimen/lh_text_section_heading</item>
+        <item name="android:textColor">@color/lh_text</item>
+    </style>
+
+    <!-- Card titles: 14.5sp Bold. -->
+    <style name="Lh.Text.CardTitle" parent="android:TextAppearance">
+        <item name="fontFamily">@font/jakarta_bold</item>
+        <item name="android:fontFamily">@font/jakarta_bold</item>
+        <item name="android:textSize">@dimen/lh_text_card_title</item>
+        <item name="android:textColor">@color/lh_text</item>
+    </style>
+
+    <!-- Body copy: 15sp Medium (was Normal — regular weight at small sizes
+         read as too light to be comfortably legible). -->
+    <style name="Lh.Text.Body" parent="android:TextAppearance">
+        <item name="fontFamily">@font/jakarta_medium</item>
+        <item name="android:fontFamily">@font/jakarta_medium</item>
+        <item name="android:textSize">@dimen/lh_text_body</item>
+        <item name="android:textColor">@color/lh_muted</item>
+    </style>
+
+    <!-- Emphasised body, e.g. prices. -->
+    <style name="Lh.Text.BodyBold" parent="android:TextAppearance">
+        <item name="fontFamily">@font/jakarta_bold</item>
+        <item name="android:fontFamily">@font/jakarta_bold</item>
+        <item name="android:textSize">@dimen/lh_text_body_bold</item>
+        <item name="android:textColor">@color/lh_accent</item>
+    </style>
+
+    <!-- Button labels. -->
+    <style name="Lh.Text.Button" parent="android:TextAppearance">
+        <item name="fontFamily">@font/jakarta_bold</item>
+        <item name="android:fontFamily">@font/jakarta_bold</item>
+        <item name="android:textSize">@dimen/lh_text_button</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+    <!-- Localities and field labels: 13sp SemiBold (was Medium 11.5sp — too
+         small and too light for a role used as body-adjacent copy). -->
+    <style name="Lh.Text.Label" parent="android:TextAppearance">
+        <item name="fontFamily">@font/jakarta_semibold</item>
+        <item name="android:fontFamily">@font/jakarta_semibold</item>
+        <item name="android:textSize">@dimen/lh_text_label</item>
+        <item name="android:textColor">@color/lh_muted</item>
+    </style>
+
+    <!-- Badges: 9.5sp Bold uppercase with letter-spacing. -->
+    <style name="Lh.Text.Badge" parent="android:TextAppearance">
+        <item name="fontFamily">@font/jakarta_bold</item>
+        <item name="android:fontFamily">@font/jakarta_bold</item>
+        <item name="android:textSize">@dimen/lh_text_badge</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:letterSpacing">0.09</item>
+    </style>
+
+    <!-- Bottom-nav labels. -->
+    <style name="Lh.Text.NavLabel" parent="android:TextAppearance">
+        <item name="fontFamily">@font/jakarta_semibold</item>
+        <item name="android:fontFamily">@font/jakarta_semibold</item>
+        <item name="android:textSize">@dimen/lh_text_nav_label</item>
+    </style>
+</resources>

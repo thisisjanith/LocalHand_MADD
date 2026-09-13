@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- The primary accent action button.
+         backgroundTint is applied in code (see LhColorStateLists) rather than
+         via a res/color selector — see that file's kdoc for why. -->
+    <style name="Lh.Button.Primary" parent="Widget.MaterialComponents.Button">
+        <item name="backgroundTint">@color/lh_accent</item>
+        <item name="android:textColor">@color/lh_on_accent</item>
+        <item name="android:textAppearance">@style/Lh.Text.Button</item>
+        <item name="shapeAppearance">@style/Lh.Shape.Button</item>
+        <item name="android:minHeight">@dimen/lh_button_height</item>
+        <item name="android:paddingStart">@dimen/lh_gap_large</item>
+        <item name="android:paddingEnd">@dimen/lh_gap_large</item>
+        <item name="iconTint">@color/lh_on_accent</item>
+        <item name="iconGravity">textStart</item>
+        <item name="rippleColor">@color/lh_on_accent</item>
+    </style>
+
+    <!-- Quieter outlined counterpart, e.g. the Call action. -->
+    <style name="Lh.Button.Secondary" parent="Widget.MaterialComponents.Button.OutlinedButton">
+        <item name="android:textColor">@color/lh_text</item>
+        <item name="android:textAppearance">@style/Lh.Text.Button</item>
+        <item name="shapeAppearance">@style/Lh.Shape.Button</item>
+        <item name="android:minHeight">@dimen/lh_button_height</item>
+        <item name="android:paddingStart">@dimen/lh_gap_large</item>
+        <item name="android:paddingEnd">@dimen/lh_gap_large</item>
+        <item name="strokeColor">@color/lh_border</item>
+        <item name="strokeWidth">@dimen/lh_hairline</item>
+        <item name="backgroundTint">@color/lh_surface</item>
+        <item name="iconTint">@color/lh_text</item>
+        <item name="iconGravity">textStart</item>
+        <item name="rippleColor">@color/lh_text</item>
+    </style>
+
+    <!-- Flat, borderless text button (Skip, Log in, Sign up links). -->
+    <style name="Lh.Button.Text" parent="Widget.MaterialComponents.Button.TextButton">
+        <item name="android:textAppearance">@style/Lh.Text.Button</item>
+    </style>
+
+    <!-- Labelled text input using the surface/border tokens.
+         boxStrokeColor is applied in code (see LhColorStateLists) rather than
+         via a res/color selector — see that file's kdoc for why. -->
+    <style name="Lh.TextField" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="boxStrokeColor">@color/lh_border</item>
+        <item name="boxStrokeErrorColor">@color/lh_danger</item>
+        <item name="hintTextColor">@color/lh_faint</item>
+        <item name="android:textColorHint">@color/lh_faint</item>
+        <item name="boxBackgroundColor">@color/lh_surface</item>
+        <item name="shapeAppearance">@style/Lh.Shape.Field</item>
+        <item name="errorTextColor">@color/lh_danger</item>
+        <item name="cursorColor">@color/lh_accent</item>
+        <item name="errorIconDrawable">@null</item>
+    </style>
+
+    <style name="Lh.TextField.EditText" parent="Widget.Material3.TextInputEditText.OutlinedBox">
+        <item name="android:textAppearance">@style/Lh.Text.Body</item>
+        <item name="android:textColor">@color/lh_text</item>
+        <item name="android:minHeight">@dimen/lh_field_height</item>
+    </style>
+
+    <!-- Flat surface card with a hairline border, no elevation. -->
+    <style name="Lh.Card" parent="Widget.Material3.CardView.Elevated">
+        <item name="cardBackgroundColor">@color/lh_surface</item>
+        <item name="strokeColor">@color/lh_border</item>
+        <item name="strokeWidth">@dimen/lh_hairline</item>
+        <item name="cardElevation">0dp</item>
+        <item name="cardCornerRadius">@dimen/lh_radius_card</item>
+        <item name="rippleColor">@color/lh_accent_wash</item>
+    </style>
+
+    <!-- thumbTint/trackTint are applied in code (see LhColorStateLists)
+         rather than via res/color selectors — see that file's kdoc for why. -->
+    <style name="Lh.Switch" parent="Widget.Material3.CompoundButton.MaterialSwitch">
+        <item name="thumbTint">@color/lh_surface</item>
+        <item name="trackTint">@color/lh_border</item>
+        <item name="trackDecorationTint">@android:color/transparent</item>
+    </style>
+
+    <!-- chipBackgroundColor/chipStrokeColor/textColor are applied in code
+         (see LhColorStateLists) rather than via res/color selectors — see
+         that file's kdoc for why. -->
+    <style name="Lh.Chip" parent="Widget.Material3.Chip.Filter">
+        <item name="android:textAppearance">@style/Lh.Text.Label</item>
+        <item name="chipBackgroundColor">@color/lh_surface</item>
+        <item name="chipStrokeColor">@color/lh_border</item>
+        <item name="chipStrokeWidth">@dimen/lh_hairline</item>
+        <item name="checkedIconVisible">false</item>
+        <item name="android:textColor">@color/lh_muted</item>
+    </style>
+</resources>

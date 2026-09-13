@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:paddingStart="@dimen/lh_screen_padding"
+    android:paddingEnd="@dimen/lh_screen_padding">
+
+    <FrameLayout
+        android:layout_width="@dimen/lh_onboarding_circle"
+        android:layout_height="@dimen/lh_onboarding_circle"
+        android:background="@drawable/bg_circle_accent_wash">
+
+        <ImageView
+            android:id="@+id/page_icon"
+            android:layout_width="@dimen/lh_onboarding_icon"
+            android:layout_height="@dimen/lh_onboarding_icon"
+            android:layout_gravity="center"
+            app:tint="@color/lh_accent"
+            tools:src="@drawable/ic_home"
+            android:contentDescription="@null" />
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/page_headline"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:gravity="center"
+        android:textAppearance="@style/Lh.Text.Headline"
+        tools:text="Everything you need,\nright in your area" />
+
+    <TextView
+        android:id="@+id/page_body"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/lh_gap"
+        android:gravity="center"
+        android:textAppearance="@style/Lh.Text.Body"
+        tools:text="LocalHand connects you with trusted neighbours offering services and second-hand goods." />
+
+</LinearLayout>

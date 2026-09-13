@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="?attr/android:colorBackground"
+    android:fitsSystemWindows="true">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="@dimen/lh_gap_small"
+        android:paddingEnd="@dimen/lh_gap_small"
+        android:paddingTop="@dimen/lh_gap_small"
+        android:paddingBottom="@dimen/lh_gap_small">
+
+        <Button
+            android:id="@+id/btn_skip"
+            style="@style/Lh.Button.Text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:text="Skip"
+            android:textColor="@color/lh_muted" />
+    </FrameLayout>
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/pager"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <LinearLayout
+        android:id="@+id/dot_indicator"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/lh_section_gap"
+        android:orientation="horizontal"
+        android:gravity="center" />
+
+    <Button
+        android:id="@+id/btn_next"
+        style="@style/Lh.Button.Primary"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/lh_screen_padding"
+        android:layout_marginEnd="@dimen/lh_screen_padding"
+        android:text="Next" />
+
+    <Button
+        android:id="@+id/btn_have_account"
+        style="@style/Lh.Button.Text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/lh_gap_tiny"
+        android:layout_marginBottom="@dimen/lh_gap_large"
+        android:text="I already have an account"
+        android:textColor="@color/lh_muted" />
+
+</LinearLayout>

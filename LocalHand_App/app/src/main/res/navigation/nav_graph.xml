@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/onboardingFragment">
+
+    <fragment
+        android:id="@+id/onboardingFragment"
+        android:name="com.example.localhand_new.ui.fragments.OnboardingFragment"
+        android:label="Onboarding"
+        tools:layout="@layout/fragment_onboarding">
+        <action
+            android:id="@+id/action_onboarding_to_login"
+            app:destination="@id/loginFragment"
+            app:popUpTo="@id/onboardingFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.localhand_new.ui.fragments.LoginFragment"
+        android:label="Login"
+        tools:layout="@layout/fragment_login">
+        <action
+            android:id="@+id/action_login_to_home"
+            app:destination="@id/homeFragment"
+            app:popUpTo="@id/loginFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_login_to_signup"
+            app:destination="@id/signUpFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/signUpFragment"
+        android:name="com.example.localhand_new.ui.fragments.SignUpFragment"
+        android:label="Sign Up"
+        tools:layout="@layout/fragment_signup">
+        <action
+            android:id="@+id/action_signup_to_home"
+            app:destination="@id/homeFragment"
+            app:popUpTo="@id/loginFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.localhand_new.ui.fragments.HomeFragment"
+        android:label="Home"
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_home_to_listingDetail"
+            app:destination="@id/listingDetailFragment" />
+        <action
+            android:id="@+id/action_home_to_search"
+            app:destination="@id/searchFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/searchFragment"
+        android:name="com.example.localhand_new.ui.fragments.SearchFragment"
+        android:label="Search"
+        tools:layout="@layout/fragment_search">
+        <argument
+            android:name="category"
+            app:argType="string"
+            app:nullable="true"
+            android:defaultValue="@null" />
+        <action
+            android:id="@+id/action_search_to_listingDetail"
+            app:destination="@id/listingDetailFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/listingDetailFragment"
+        android:name="com.example.localhand_new.ui.fragments.ListingDetailFragment"
+        android:label="Listing"
+        tools:layout="@layout/fragment_listing_detail">
+        <argument
+            android:name="id"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_listingDetail_to_providerProfile"
+            app:destination="@id/providerProfileFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/providerProfileFragment"
+        android:name="com.example.localhand_new.ui.fragments.ProviderProfileFragment"
+        android:label="Profile"
+        tools:layout="@layout/fragment_provider_profile">
+        <argument
+            android:name="userId"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_providerProfile_to_listingDetail"
+            app:destination="@id/listingDetailFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/createListingFragment"
+        android:name="com.example.localhand_new.ui.fragments.CreateListingFragment"
+        android:label="New Listing"
+        tools:layout="@layout/fragment_create_listing">
+        <argument
+            android:name="editing"
+            app:argType="boolean"
+            android:defaultValue="false" />
+        <action
+            android:id="@+id/action_createListing_to_home"
+            app:destination="@id/homeFragment"
+            app:popUpTo="@id/homeFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.example.localhand_new.ui.fragments.ProfileFragment"
+        android:label="Profile"
+        tools:layout="@layout/fragment_profile">
+        <action
+            android:id="@+id/action_profile_to_favourites"
+            app:destination="@id/favouritesFragment" />
+        <action
+            android:id="@+id/action_profile_to_listingDetail"
+            app:destination="@id/listingDetailFragment" />
+        <action
+            android:id="@+id/action_profile_to_createListing"
+            app:destination="@id/createListingFragment" />
+        <action
+            android:id="@+id/action_profile_to_login"
+            app:destination="@id/loginFragment"
+            app:popUpTo="@id/nav_graph"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/favouritesFragment"
+        android:name="com.example.localhand_new.ui.fragments.FavouritesFragment"
+        android:label="Favourites"
+        tools:layout="@layout/fragment_favourites">
+        <action
+            android:id="@+id/action_favourites_to_listingDetail"
+            app:destination="@id/listingDetailFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/assistantFragment"
+        android:name="com.example.localhand_new.ui.fragments.AssistantFragment"
+        android:label="Ask AI"
+        tools:layout="@layout/fragment_assistant">
+        <action
+            android:id="@+id/action_assistant_to_listingDetail"
+            app:destination="@id/listingDetailFragment" />
+    </fragment>
+
+</navigation>

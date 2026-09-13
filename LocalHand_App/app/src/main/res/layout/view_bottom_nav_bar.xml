@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Five-slot bottom bar: Home, Search, a raised centre FAB, Ask AI, Profile.
+  The bar itself is a plain LinearLayout row (NOT BottomNavigationView, which
+  can't cleanly show a FAB overflowing above its top edge). The FAB is a
+  sibling in the parent ConstraintLayout with a negative top margin so it
+  visually lifts clear of the bar; elevation keeps it drawn above the bar.
+-->
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!-- Hairline top border. -->
+    <View
+        android:id="@+id/nav_bar_divider"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/lh_hairline"
+        android:background="@color/lh_border"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/nav_bar_surface" />
+
+    <LinearLayout
+        android:id="@+id/nav_bar_surface"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/lh_nav_bar_height"
+        android:background="@color/lh_surface"
+        android:elevation="@dimen/lh_elevation_nav"
+        android:orientation="horizontal"
+        android:paddingTop="@dimen/lh_hairline"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <LinearLayout
+            android:id="@+id/nav_tab_home"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:clickable="true"
+            android:focusable="true">
+
+            <ImageView
+                android:id="@+id/nav_tab_home_icon"
+                android:layout_width="@dimen/lh_icon_size"
+                android:layout_height="@dimen/lh_icon_size"
+                android:src="@drawable/ic_home"
+                app:tint="@color/lh_muted"
+                android:contentDescription="Home" />
+
+            <TextView
+                android:id="@+id/nav_tab_home_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:text="Home"
+                android:textAppearance="@style/Lh.Text.NavLabel"
+                android:textColor="@color/lh_muted" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/nav_tab_search"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:clickable="true"
+            android:focusable="true">
+
+            <ImageView
+                android:id="@+id/nav_tab_search_icon"
+                android:layout_width="@dimen/lh_icon_size"
+                android:layout_height="@dimen/lh_icon_size"
+                android:src="@drawable/ic_search"
+                app:tint="@color/lh_muted"
+                android:contentDescription="Search" />
+
+            <TextView
+                android:id="@+id/nav_tab_search_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:text="Search"
+                android:textAppearance="@style/Lh.Text.NavLabel"
+                android:textColor="@color/lh_muted" />
+        </LinearLayout>
+
+        <!-- Centre slot: empty spacer matching the FAB's footprint; the FAB
+             itself is drawn as a sibling so it can overflow upward. -->
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+
+        <LinearLayout
+            android:id="@+id/nav_tab_assistant"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:clickable="true"
+            android:focusable="true">
+
+            <ImageView
+                android:id="@+id/nav_tab_assistant_icon"
+                android:layout_width="@dimen/lh_icon_size"
+                android:layout_height="@dimen/lh_icon_size"
+                android:src="@drawable/ic_chat"
+                app:tint="@color/lh_muted"
+                android:contentDescription="Ask AI" />
+
+            <TextView
+                android:id="@+id/nav_tab_assistant_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:text="Ask AI"
+                android:textAppearance="@style/Lh.Text.NavLabel"
+                android:textColor="@color/lh_muted" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/nav_tab_profile"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:clickable="true"
+            android:focusable="true">
+
+            <ImageView
+                android:id="@+id/nav_tab_profile_icon"
+                android:layout_width="@dimen/lh_icon_size"
+                android:layout_height="@dimen/lh_icon_size"
+                android:src="@drawable/ic_person"
+                app:tint="@color/lh_muted"
+                android:contentDescription="Profile" />
+
+            <TextView
+                android:id="@+id/nav_tab_profile_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:text="Profile"
+                android:textAppearance="@style/Lh.Text.NavLabel"
+                android:textColor="@color/lh_muted" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- Raised centre FAB: accent gradient, white ring, drop shadow. Anchored
+         to the bar's own bottom edge (not its top) so most of the FAB sits
+         within the bar's row alongside the other tab icons, with only its
+         cap poking above — not floating disconnected above the whole bar.
+         The margin is BottomNavBar.applyBottomInset's fabLift, on top of
+         whatever bottom system-bar inset that method also adds there. -->
+    <FrameLayout
+        android:id="@+id/nav_fab_ring"
+        android:layout_width="@dimen/lh_fab_ring_box"
+        android:layout_height="@dimen/lh_fab_ring_box"
+        android:layout_marginBottom="@dimen/lh_fab_lift"
+        android:background="@drawable/bg_circle_surface"
+        android:padding="@dimen/lh_fab_ring"
+        android:elevation="@dimen/lh_elevation_fab"
+        app:layout_constraintBottom_toBottomOf="@id/nav_bar_surface"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ImageButton
+            android:id="@+id/nav_fab_create"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:background="@drawable/bg_fab_gradient"
+            android:src="@drawable/ic_add"
+            app:tint="@color/lh_on_accent"
+            android:scaleType="center"
+            android:contentDescription="Create listing" />
+    </FrameLayout>
+
+</merge>

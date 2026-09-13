@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Raw palette tokens (light). Layouts reference the semantic lh_* names
+         below, not these, except where the semantic name is itself the raw
+         value (e.g. lh_accent, which is identical in both themes). -->
+    <color name="lh_background">#FDF7F2</color>
+    <color name="lh_surface">#FFFFFFFF</color>
+    <color name="lh_text">#2B2926</color>
+    <!-- Darkened from #6E6A64/#94908A for readability: muted now sits at
+         ~7.3:1 contrast against lh_background (was ~4.9:1) and faint at
+         ~4.6:1 (was ~2.7:1, failing AA for normal-size text). -->
+    <color name="lh_muted">#57534D</color>
+    <color name="lh_faint">#726D66</color>
+    <color name="lh_border">#E4E0DA</color>
+    <color name="lh_danger">#B03A2E</color>
+    <color name="lh_star">#C8901F</color>
+    <color name="lh_secondary">#9A6320</color>
+
+    <color name="lh_accent">#1F7A5C</color>
+    <color name="lh_on_accent">#FFFFFFFF</color>
+
+    <color name="lh_accent_wash">#1F1F7A5C</color>
+    <color name="lh_secondary_wash">#1F9A6320</color>
+
+    <color name="lh_transparent">#00000000</color>
+
+    <!-- Per-category tile colours: a wash background paired with a solid
+         icon tint, one pair per Category enum entry. -->
+    <color name="lh_cat_repairs">#2F6FED</color>
+    <color name="lh_cat_repairs_wash">#1A2F6FED</color>
+    <color name="lh_cat_tutoring">#9A5B13</color>
+    <color name="lh_cat_tutoring_wash">#1A9A5B13</color>
+    <color name="lh_cat_cleaning">#0E9488</color>
+    <color name="lh_cat_cleaning_wash">#1A0E9488</color>
+    <color name="lh_cat_garden">#3F9142</color>
+    <color name="lh_cat_garden_wash">#1A3F9142</color>
+    <color name="lh_cat_errands">#D9782E</color>
+    <color name="lh_cat_errands_wash">#1AD9782E</color>
+    <color name="lh_cat_electronics">#6B5CE0</color>
+    <color name="lh_cat_electronics_wash">#1A6B5CE0</color>
+    <color name="lh_cat_furniture">#B0562E</color>
+    <color name="lh_cat_furniture_wash">#1AB0562E</color>
+    <color name="lh_cat_other">#5C6470</color>
+    <color name="lh_cat_other_wash">#1A5C6470</color>
+</resources>

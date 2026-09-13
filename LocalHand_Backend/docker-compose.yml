@@ -1,0 +1,15 @@
+services:
+  db:
+    image: postgres:16-alpine
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: localhand
+      POSTGRES_PASSWORD: localhand
+      POSTGRES_DB: localhand
+    ports:
+      - "15432:5432"
+    volumes:
+      - localhand_pg_data:/var/lib/postgresql/data
+
+volumes:
+  localhand_pg_data:

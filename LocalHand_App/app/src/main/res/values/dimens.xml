@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="lh_screen_padding">20dp</dimen>
+    <dimen name="lh_logo_tile">56dp</dimen>
+    <dimen name="lh_card_padding">12dp</dimen>
+    <dimen name="lh_gap">12dp</dimen>
+    <dimen name="lh_gap_small">8dp</dimen>
+    <dimen name="lh_gap_tiny">4dp</dimen>
+    <dimen name="lh_gap_hair">2dp</dimen>
+    <dimen name="lh_gap_nudge">6dp</dimen>
+    <dimen name="lh_gap_large">16dp</dimen>
+    <dimen name="lh_section_gap">24dp</dimen>
+    <dimen name="lh_typing_dot_size">7dp</dimen>
+
+    <dimen name="lh_hairline">1dp</dimen>
+    <dimen name="lh_min_touch_target">48dp</dimen>
+
+    <dimen name="lh_radius_card">14dp</dimen>
+    <dimen name="lh_radius_thumb">10dp</dimen>
+    <dimen name="lh_radius_image">16dp</dimen>
+    <dimen name="lh_radius_field">12dp</dimen>
+    <dimen name="lh_radius_button">14dp</dimen>
+    <dimen name="lh_radius_pill">100dp</dimen>
+    <dimen name="lh_radius_bubble">18dp</dimen>
+
+    <dimen name="lh_icon_size">22dp</dimen>
+    <dimen name="lh_icon_size_small">16dp</dimen>
+    <dimen name="lh_icon_size_large">30dp</dimen>
+    <dimen name="lh_button_height">52dp</dimen>
+    <dimen name="lh_field_height">56dp</dimen>
+
+    <dimen name="lh_near_you_card_width">158dp</dimen>
+    <dimen name="lh_near_you_image_height">104dp</dimen>
+    <dimen name="lh_row_thumb_size">64dp</dimen>
+
+    <dimen name="lh_avatar_small">36dp</dimen>
+    <dimen name="lh_avatar_medium">44dp</dimen>
+    <dimen name="lh_avatar_large">88dp</dimen>
+
+    <dimen name="lh_category_tile">56dp</dimen>
+    <dimen name="lh_onboarding_circle">220dp</dimen>
+    <dimen name="lh_onboarding_icon">64dp</dimen>
+
+    <dimen name="lh_fab_size">50dp</dimen>
+    <dimen name="lh_fab_ring">3dp</dimen>
+    <dimen name="lh_fab_lift">24dp</dimen>
+    <dimen name="lh_nav_bar_height">64dp</dimen>
+    <dimen name="lh_elevation_fab">16dp</dimen>
+    <dimen name="lh_elevation_nav">12dp</dimen>
+
+    <dimen name="lh_dot_active_width">20dp</dimen>
+    <dimen name="lh_dot_size">6dp</dimen>
+
+    <dimen name="lh_map_height">150dp</dimen>
+    <dimen name="lh_map_grid">28dp</dimen>
+    <dimen name="lh_photo_zone_height">120dp</dimen>
+    <dimen name="lh_photo_thumb_size">96dp</dimen>
+    <dimen name="lh_bubble_max_width">280dp</dimen>
+
+    <dimen name="lh_text_screen_title">23sp</dimen>
+    <dimen name="lh_text_headline">27sp</dimen>
+    <dimen name="lh_text_wordmark">22sp</dimen>
+    <dimen name="lh_text_section_heading">16sp</dimen>
+    <dimen name="lh_text_card_title">14.5sp</dimen>
+    <dimen name="lh_text_body">15sp</dimen>
+    <dimen name="lh_text_body_bold">15sp</dimen>
+    <dimen name="lh_text_button">16sp</dimen>
+    <dimen name="lh_text_label">13sp</dimen>
+    <dimen name="lh_text_badge">9.5sp</dimen>
+    <dimen name="lh_text_nav_label">11sp</dimen>
+
+    <!-- Derived: fabSize + fabRing*2, the outer ring box around the centre FAB. -->
+    <dimen name="lh_fab_ring_box">56dp</dimen>
+</resources>

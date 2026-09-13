@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="lh_background">#1B1D22</color>
+    <color name="lh_surface">#24262C</color>
+    <color name="lh_text">#EDEDF0</color>
+    <color name="lh_muted">#A6A8AF</color>
+    <color name="lh_faint">#7C7E86</color>
+    <color name="lh_border">#3A3D45</color>
+    <color name="lh_danger">#D4685C</color>
+    <color name="lh_star">#D9A43A</color>
+    <color name="lh_secondary">#B98243</color>
+
+    <color name="lh_accent">#1F7A5C</color>
+    <color name="lh_on_accent">#FFFFFFFF</color>
+
+    <color name="lh_accent_wash">#2E1F7A5C</color>
+    <color name="lh_secondary_wash">#33B98243</color>
+
+    <color name="lh_cat_repairs">#5E8FF2</color>
+    <color name="lh_cat_repairs_wash">#332F6FED</color>
+    <color name="lh_cat_tutoring">#C68A3E</color>
+    <color name="lh_cat_tutoring_wash">#339A5B13</color>
+    <color name="lh_cat_cleaning">#3BB6AA</color>
+    <color name="lh_cat_cleaning_wash">#330E9488</color>
+    <color name="lh_cat_garden">#65B968</color>
+    <color name="lh_cat_garden_wash">#333F9142</color>
+    <color name="lh_cat_errands">#E5975A</color>
+    <color name="lh_cat_errands_wash">#33D9782E</color>
+    <color name="lh_cat_electronics">#8C80E8</color>
+    <color name="lh_cat_electronics_wash">#336B5CE0</color>
+    <color name="lh_cat_furniture">#CC7C54</color>
+    <color name="lh_cat_furniture_wash">#33B0562E</color>
+    <color name="lh_cat_other">#8A929D</color>
+    <color name="lh_cat_other_wash">#335C6470</color>
+</resources>

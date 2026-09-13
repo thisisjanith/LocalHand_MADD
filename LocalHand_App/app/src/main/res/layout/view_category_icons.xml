@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- One category tile: icon on an accent-wash square, label beneath. Reused
+     eight times (chunked 4 per row) by HomeFragment's category grid. -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_weight="1"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="?attr/selectableItemBackground"
+    android:clickable="true"
+    android:focusable="true">
+
+    <FrameLayout
+        android:id="@+id/tile_icon_frame"
+        android:layout_width="@dimen/lh_category_tile"
+        android:layout_height="@dimen/lh_category_tile"
+        android:background="@drawable/bg_category_tile">
+
+        <ImageView
+            android:id="@+id/tile_icon"
+            android:layout_width="@dimen/lh_icon_size"
+            android:layout_height="@dimen/lh_icon_size"
+            android:layout_gravity="center"
+            app:tint="@color/lh_accent"
+            tools:src="@drawable/ic_build"
+            android:contentDescription="@null" />
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/tile_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/lh_gap_nudge"
+        android:textAppearance="@style/Lh.Text.Label"
+        tools:text="Repairs" />
+
+</LinearLayout>

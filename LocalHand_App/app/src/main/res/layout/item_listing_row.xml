@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/card_root"
+    style="@style/Lh.Card"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="top"
+        android:padding="@dimen/lh_card_padding">
+
+        <ImageView
+            android:id="@+id/row_image"
+            android:layout_width="@dimen/lh_row_thumb_size"
+            android:layout_height="@dimen/lh_row_thumb_size"
+            android:background="@drawable/bg_photo_picker"
+            android:scaleType="centerCrop"
+            android:contentDescription="@null" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="@dimen/lh_card_padding"
+            android:layout_marginEnd="@dimen/lh_card_padding"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:id="@+id/row_type_badge"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_badge_accent"
+                    android:paddingStart="@dimen/lh_gap_small"
+                    android:paddingEnd="@dimen/lh_gap_small"
+                    android:paddingTop="3dp"
+                    android:paddingBottom="3dp"
+                    android:textAppearance="@style/Lh.Text.Badge"
+                    tools:text="SERVICE" />
+
+                <TextView
+                    android:id="@+id/row_category"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/lh_gap_small"
+                    android:textAppearance="@style/Lh.Text.Label"
+                    android:textColor="@color/lh_faint"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    tools:text="Repairs" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/row_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/lh_gap_nudge"
+                android:textAppearance="@style/Lh.Text.CardTitle"
+                android:maxLines="2"
+                android:ellipsize="end"
+                tools:text="Electrical Repairs &amp; Wiring" />
+
+            <LinearLayout
+                android:id="@+id/row_locality_group"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/lh_gap_tiny"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:visibility="gone"
+                tools:visibility="visible">
+
+                <ImageView
+                    android:layout_width="12dp"
+                    android:layout_height="12dp"
+                    android:src="@drawable/ic_place"
+                    app:tint="@color/lh_faint"
+                    android:contentDescription="@null" />
+
+                <TextView
+                    android:id="@+id/row_locality"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/lh_gap_tiny"
+                    android:textAppearance="@style/Lh.Text.Label"
+                    android:textColor="@color/lh_faint"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    tools:text="New Kandy Road" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/row_distance"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1dp"
+                android:textAppearance="@style/Lh.Text.Label"
+                android:textColor="@color/lh_accent"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:visibility="gone"
+                tools:visibility="visible"
+                tools:text="450 m away" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/lh_gap_small"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:id="@+id/row_price"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textAppearance="@style/Lh.Text.BodyBold"
+                    android:textColor="@color/lh_accent"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    tools:text="Rs 800 / hour" />
+
+                <ImageView
+                    android:layout_width="@dimen/lh_icon_size_small"
+                    android:layout_height="@dimen/lh_icon_size_small"
+                    android:src="@drawable/ic_star"
+                    app:tint="@color/lh_star"
+                    android:contentDescription="@null" />
+
+                <TextView
+                    android:id="@+id/row_rating"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/lh_gap_tiny"
+                    android:textAppearance="@style/Lh.Text.Label"
+                    tools:text="4.8" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Trailing slot: default heart toggle, swapped for edit/delete icons
+             on Profile's My Listings via row_trailing_edit_delete visibility. -->
+        <FrameLayout
+            android:id="@+id/row_trailing_heart_frame"
+            android:layout_width="@dimen/lh_min_touch_target"
+            android:layout_height="@dimen/lh_min_touch_target">
+
+            <ImageButton
+                android:id="@+id/row_favourite_heart"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:scaleType="center"
+                android:src="@drawable/ic_favorite_border"
+                android:contentDescription="Save to favourites" />
+        </FrameLayout>
+
+        <LinearLayout
+            android:id="@+id/row_trailing_edit_delete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            tools:visibility="gone">
+
+            <ImageButton
+                android:id="@+id/row_edit"
+                android:layout_width="@dimen/lh_min_touch_target"
+                android:layout_height="@dimen/lh_min_touch_target"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:scaleType="center"
+                android:src="@drawable/ic_edit"
+                app:tint="@color/lh_muted"
+                android:contentDescription="Edit listing" />
+
+            <ImageButton
+                android:id="@+id/row_delete"
+                android:layout_width="@dimen/lh_min_touch_target"
+                android:layout_height="@dimen/lh_min_touch_target"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:scaleType="center"
+                android:src="@drawable/ic_delete"
+                app:tint="@color/lh_danger"
+                android:contentDescription="Delete listing" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>

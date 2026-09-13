@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Centred empty state: icon on a wash circle, a title and a hint. Ports
+  ui/components/Common.kt's EmptyState. Set empty_icon/empty_title/
+  empty_message and toggle root visibility from the Fragment.
+-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    android:padding="@dimen/lh_section_gap">
+
+    <FrameLayout
+        android:layout_width="@dimen/lh_avatar_large"
+        android:layout_height="@dimen/lh_avatar_large"
+        android:background="@drawable/bg_circle_accent_wash">
+
+        <ImageView
+            android:id="@+id/empty_icon"
+            android:layout_width="@dimen/lh_icon_size_large"
+            android:layout_height="@dimen/lh_icon_size_large"
+            android:layout_gravity="center"
+            app:tint="@color/lh_accent"
+            tools:src="@drawable/ic_search_off"
+            android:contentDescription="@null" />
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/empty_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/lh_gap_large"
+        android:gravity="center"
+        android:textAppearance="@style/Lh.Text.SectionHeading"
+        tools:text="Nothing matches yet" />
+
+    <TextView
+        android:id="@+id/empty_message"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/lh_gap_small"
+        android:gravity="center"
+        android:textAppearance="@style/Lh.Text.Body"
+        tools:text="Try a different keyword, or widen your filters." />
+
+</LinearLayout>

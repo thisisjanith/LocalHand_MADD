@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/android:colorBackground"
+    android:orientation="vertical"
+    android:fitsSystemWindows="true">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/lh_screen_padding"
+        android:layout_marginEnd="@dimen/lh_screen_padding"
+        android:layout_marginTop="@dimen/lh_gap_large"
+        android:layout_marginBottom="@dimen/lh_gap"
+        android:text="Search"
+        android:textAppearance="@style/Lh.Text.ScreenTitle" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_query"
+        style="@style/Lh.TextField"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/lh_screen_padding"
+        android:layout_marginEnd="@dimen/lh_screen_padding"
+        android:hint="Keyword">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_query"
+            style="@style/Lh.TextField.EditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/lh_gap_large"
+        android:scrollbars="none">
+
+        <com.google.android.material.chip.ChipGroup
+            android:id="@+id/chip_group_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingStart="@dimen/lh_screen_padding"
+            android:paddingEnd="@dimen/lh_screen_padding"
+            app:singleSelection="true"
+            app:chipSpacingHorizontal="8dp" />
+    </HorizontalScrollView>
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/lh_gap_small"
+        android:scrollbars="none">
+
+        <com.google.android.material.chip.ChipGroup
+            android:id="@+id/chip_group_category"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingStart="@dimen/lh_screen_padding"
+            android:paddingEnd="@dimen/lh_screen_padding"
+            app:singleSelection="true"
+            app:chipSpacingHorizontal="8dp" />
+    </HorizontalScrollView>
+
+    <TextView
+        android:id="@+id/tv_result_count"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/lh_screen_padding"
+        android:layout_marginEnd="@dimen/lh_screen_padding"
+        android:layout_marginTop="@dimen/lh_gap_large"
+        android:layout_marginBottom="@dimen/lh_gap"
+        android:textAppearance="@style/Lh.Text.Label"
+        tools:text="12 results" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_results"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clipToPadding="false"
+            android:paddingStart="@dimen/lh_screen_padding"
+            android:paddingEnd="@dimen/lh_screen_padding"
+            android:paddingBottom="@dimen/lh_nav_bar_height"
+            tools:listitem="@layout/item_listing_row" />
+
+        <include
+            android:id="@+id/empty_state"
+            layout="@layout/view_empty_state"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:visibility="gone" />
+    </FrameLayout>
+
+</LinearLayout>

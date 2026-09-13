@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Lh.Shape.Thumb" parent="ShapeAppearance.Material3.SmallComponent">
+        <item name="cornerSize">@dimen/lh_radius_thumb</item>
+    </style>
+
+    <style name="Lh.Shape.Field" parent="ShapeAppearance.Material3.SmallComponent">
+        <item name="cornerSize">@dimen/lh_radius_field</item>
+    </style>
+
+    <style name="Lh.Shape.Card" parent="ShapeAppearance.Material3.MediumComponent">
+        <item name="cornerSize">@dimen/lh_radius_card</item>
+    </style>
+
+    <style name="Lh.Shape.CardTop" parent="ShapeAppearance.Material3.MediumComponent">
+        <item name="cornerSizeTopLeft">@dimen/lh_radius_card</item>
+        <item name="cornerSizeTopRight">@dimen/lh_radius_card</item>
+        <item name="cornerSizeBottomLeft">0dp</item>
+        <item name="cornerSizeBottomRight">0dp</item>
+    </style>
+
+    <style name="Lh.Shape.Image" parent="ShapeAppearance.Material3.MediumComponent">
+        <item name="cornerSize">@dimen/lh_radius_image</item>
+    </style>
+
+    <style name="Lh.Shape.Button" parent="ShapeAppearance.Material3.SmallComponent">
+        <item name="cornerSize">@dimen/lh_radius_button</item>
+    </style>
+
+    <style name="Lh.Shape.Pill" parent="ShapeAppearance.Material3.SmallComponent">
+        <item name="cornerSize">50%</item>
+    </style>
+</resources>

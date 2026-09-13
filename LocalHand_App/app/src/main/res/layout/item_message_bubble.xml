@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Single view type for both user and assistant bubbles; gravity, background
+  drawable (bubble_user / bubble_assistant) and text colour are all toggled
+  in the adapter based on ChatMessage.fromUser.
+-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/bubble_row"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/bubble_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxWidth="@dimen/lh_bubble_max_width"
+            android:paddingStart="@dimen/lh_gap_large"
+            android:paddingEnd="@dimen/lh_gap_large"
+            android:paddingTop="@dimen/lh_gap"
+            android:paddingBottom="@dimen/lh_gap"
+            android:textAppearance="@style/Lh.Text.Body"
+            tools:background="@drawable/bubble_assistant"
+            tools:text="Hi Nimasha — I'm the LocalHand assistant." />
+
+        <!-- Shown instead of bubble_text while the assistant's reply is in
+             flight; the three dots are given a staggered bounce in ChatAdapter. -->
+        <LinearLayout
+            android:id="@+id/bubble_typing"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingStart="@dimen/lh_gap_large"
+            android:paddingEnd="@dimen/lh_gap_large"
+            android:paddingTop="@dimen/lh_gap"
+            android:paddingBottom="@dimen/lh_gap"
+            android:background="@drawable/bubble_assistant"
+            android:visibility="gone"
+            tools:visibility="visible">
+
+            <View
+                android:id="@+id/typing_dot_1"
+                android:layout_width="@dimen/lh_typing_dot_size"
+                android:layout_height="@dimen/lh_typing_dot_size"
+                android:background="@drawable/dot_typing" />
+
+            <View
+                android:id="@+id/typing_dot_2"
+                android:layout_width="@dimen/lh_typing_dot_size"
+                android:layout_height="@dimen/lh_typing_dot_size"
+                android:layout_marginStart="@dimen/lh_gap_tiny"
+                android:background="@drawable/dot_typing" />
+
+            <View
+                android:id="@+id/typing_dot_3"
+                android:layout_width="@dimen/lh_typing_dot_size"
+                android:layout_height="@dimen/lh_typing_dot_size"
+                android:layout_marginStart="@dimen/lh_gap_tiny"
+                android:background="@drawable/dot_typing" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/bubble_listing_link"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/lh_gap_tiny"
+            android:background="@drawable/bg_badge_secondary"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingStart="@dimen/lh_gap"
+            android:paddingEnd="@dimen/lh_gap_small"
+            android:paddingTop="@dimen/lh_gap_nudge"
+            android:paddingBottom="@dimen/lh_gap_nudge"
+            android:visibility="gone"
+            tools:visibility="visible">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="View listing"
+                android:textAppearance="@style/Lh.Text.Label"
+                android:textColor="@color/lh_accent" />
+
+            <ImageView
+                android:layout_width="@dimen/lh_icon_size_small"
+                android:layout_height="@dimen/lh_icon_size_small"
+                android:src="@drawable/ic_keyboard_arrow_right"
+                app:tint="@color/lh_accent"
+                android:contentDescription="@null" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

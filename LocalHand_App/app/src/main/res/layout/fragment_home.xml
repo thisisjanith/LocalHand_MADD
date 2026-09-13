@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scroll_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/android:colorBackground"
+    android:clipToPadding="false"
+    android:fitsSystemWindows="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingStart="@dimen/lh_screen_padding"
+            android:paddingEnd="@dimen/lh_screen_padding"
+            android:paddingTop="@dimen/lh_gap">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <View
+                        android:layout_width="@dimen/lh_dot_size"
+                        android:layout_height="@dimen/lh_dot_size"
+                        android:background="@drawable/bg_circle_accent" />
+
+                    <TextView
+                        android:id="@+id/tv_locality"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/lh_gap_nudge"
+                        android:textAppearance="@style/Lh.Text.Label"
+                        tools:text="Kaduwela Road" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:text="LocalHand"
+                    android:textAppearance="@style/Lh.Text.Wordmark" />
+            </LinearLayout>
+
+            <FrameLayout
+                android:id="@+id/avatar_frame"
+                android:layout_width="@dimen/lh_avatar_medium"
+                android:layout_height="@dimen/lh_avatar_medium"
+                android:background="@drawable/bg_circle_accent_wash"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?attr/selectableItemBackgroundBorderless">
+
+                <TextView
+                    android:id="@+id/tv_avatar_initial"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:textAppearance="@style/Lh.Text.SectionHeading"
+                    android:textColor="@color/lh_accent"
+                    tools:text="N" />
+            </FrameLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/search_affordance"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/lh_field_height"
+            android:layout_marginStart="@dimen/lh_screen_padding"
+            android:layout_marginEnd="@dimen/lh_screen_padding"
+            android:layout_marginTop="@dimen/lh_gap"
+            android:background="@drawable/bg_field"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingStart="@dimen/lh_gap"
+            android:paddingEnd="@dimen/lh_gap"
+            android:clickable="true"
+            android:focusable="true">
+
+            <ImageView
+                android:layout_width="@dimen/lh_icon_size"
+                android:layout_height="@dimen/lh_icon_size"
+                android:src="@drawable/ic_search"
+                app:tint="@color/lh_faint"
+                android:contentDescription="@null" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/lh_gap_small"
+                android:text="Search services and items"
+                android:textAppearance="@style/Lh.Text.Body"
+                android:textColor="@color/lh_faint" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/lh_screen_padding"
+            android:layout_marginEnd="@dimen/lh_screen_padding"
+            android:layout_marginTop="@dimen/lh_section_gap"
+            android:layout_marginBottom="@dimen/lh_gap"
+            android:text="Near You"
+            android:textAppearance="@style/Lh.Text.SectionHeading" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_near_you"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clipToPadding="false"
+            android:orientation="horizontal"
+            android:paddingStart="@dimen/lh_screen_padding"
+            android:paddingEnd="@dimen/lh_screen_padding"
+            tools:listitem="@layout/item_near_you_card" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/lh_screen_padding"
+            android:layout_marginEnd="@dimen/lh_screen_padding"
+            android:layout_marginTop="@dimen/lh_section_gap"
+            android:layout_marginBottom="@dimen/lh_gap"
+            android:text="Browse Categories"
+            android:textAppearance="@style/Lh.Text.SectionHeading" />
+
+        <LinearLayout
+            android:id="@+id/category_grid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/lh_screen_padding"
+            android:layout_marginEnd="@dimen/lh_screen_padding"
+            android:orientation="vertical" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/lh_screen_padding"
+            android:layout_marginEnd="@dimen/lh_screen_padding"
+            android:layout_marginTop="@dimen/lh_section_gap"
+            android:layout_marginBottom="@dimen/lh_gap"
+            android:text="Recent Listings"
+            android:textAppearance="@style/Lh.Text.SectionHeading" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_recent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/lh_screen_padding"
+            android:layout_marginEnd="@dimen/lh_screen_padding"
+            android:nestedScrollingEnabled="false"
+            tools:listitem="@layout/item_listing_row" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/lh_nav_bar_height" />
+
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>

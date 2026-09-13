@@ -1,0 +1,97 @@
+// LocalHand backend schema.
+//
+// Mirrors the Android app's data/model/Models.kt shapes (Listing, UserProfile)
+// but adds what a real multi-user backend needs that a single-device Room
+// database didn't: a real User table backing signup/login, and Favourite as
+// its own per-user join table rather than a boolean column on Listing (a
+// listing isn't "favourited" globally — it's favourited by a specific user).
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider  = "postgresql"
+  url       = env("DATABASE_URL")
+  directUrl = env("DIRECT_URL")
+}
+
+enum ListingType {
+  SERVICE
+  MARKETPLACE
+}
+
+enum Category {
+  REPAIRS
+  TUTORING
+  CLEANING
+  GARDEN
+  ERRANDS
+  ELECTRONICS
+  FURNITURE
+  OTHER
+}
+
+enum Condition {
+  LIKE_NEW
+  GOOD
+  FAIR
+}
+
+model User {
+  id           String   @id @default(uuid())
+  name         String
+  email        String   @unique
+  passwordHash String
+  phone        String
+  locality     String
+  latitude     Float?
+  longitude    Float?
+  rating       Float    @default(5.0)
+  memberSince  Int
+  createdAt    DateTime @default(now())
+
+  listings   Listing[]
+  favourites Favourite[]
+
+  @@map("users")
+}
+
+model Listing {
+  id            String      @id @default(uuid())
+  type          ListingType
+  title         String
+  category      Category
+  price         String
+  locality      String
+  latitude      Float?
+  longitude     Float?
+  condition     Condition?
+  description   String
+  imageUrls     String[]    @default([]) // public R2 URLs of the uploaded photos, in display order
+  createdAt     DateTime    @default(now())
+  updatedAt     DateTime    @updatedAt
+
+  ownerId String
+  owner   User   @relation(fields: [ownerId], references: [id], onDelete: Cascade)
+
+  favouritedBy Favourite[]
+
+  @@index([ownerId])
+  @@index([category])
+  @@index([type])
+  @@map("listings")
+}
+
+// Per-user favourite — a listing is favourited by someone, not globally.
+model Favourite {
+  userId    String
+  listingId String
+  createdAt DateTime @default(now())
+
+  user    User    @relation(fields: [userId], references: [id], onDelete: Cascade)
+  listing Listing @relation(fields: [listingId], references: [id], onDelete: Cascade)
+
+  @@id([userId, listingId])
+  @@map("favourites")
+}

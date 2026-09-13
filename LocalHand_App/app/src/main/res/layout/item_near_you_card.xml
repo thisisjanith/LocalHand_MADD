@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/card_root"
+    style="@style/Lh.Card"
+    android:layout_width="@dimen/lh_near_you_card_width"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/card_image"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/lh_near_you_image_height"
+            android:scaleType="centerCrop"
+            android:contentDescription="@null" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/lh_card_padding">
+
+            <TextView
+                android:id="@+id/card_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="@style/Lh.Text.CardTitle"
+                android:maxLines="2"
+                android:minLines="2"
+                android:ellipsize="end"
+                tools:text="Electrical Repairs &amp; Wiring" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/lh_gap_nudge"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <View
+                    android:id="@+id/card_locality_dot"
+                    android:layout_width="@dimen/lh_dot_size"
+                    android:layout_height="@dimen/lh_dot_size"
+                    android:background="@drawable/bg_circle_accent" />
+
+                <TextView
+                    android:id="@+id/card_locality"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/lh_gap_nudge"
+                    android:textAppearance="@style/Lh.Text.Label"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    tools:text="450 m away" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/lh_gap_small"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:id="@+id/card_price"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textAppearance="@style/Lh.Text.BodyBold"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    tools:text="Rs 800 / hour" />
+
+                <ImageView
+                    android:layout_width="@dimen/lh_icon_size_small"
+                    android:layout_height="@dimen/lh_icon_size_small"
+                    android:src="@drawable/ic_star"
+                    app:tint="@color/lh_star"
+                    android:contentDescription="@null" />
+
+                <TextView
+                    android:id="@+id/card_rating"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/lh_gap_tiny"
+                    android:textAppearance="@style/Lh.Text.Label"
+                    tools:text="4.8" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>
