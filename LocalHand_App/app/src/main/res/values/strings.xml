@@ -1,3 +1,87 @@
 <resources>
     <string name="app_name">LocalHand</string>
+
+    <!-- Common -->
+    <string name="cd_back">Back</string>
+    <string name="nav_home">Home</string>
+    <string name="nav_search">Search</string>
+    <string name="nav_profile">Profile</string>
+    <string name="nav_ask_ai">Ask AI</string>
+    <string name="cd_create_listing">Create listing</string>
+    <string name="cd_save_to_favourites">Save to favourites</string>
+    <string name="hint_email">Email</string>
+    <string name="hint_password">Password</string>
+    <string name="action_log_in">Log In</string>
+
+    <!-- Onboarding -->
+    <string name="onboarding_have_account">I already have an account</string>
+    <string name="action_next">Next</string>
+    <string name="action_skip">Skip</string>
+
+    <!-- Login -->
+    <string name="login_tagline">Services and second-hand goods, right in your area</string>
+    <string name="no_account_prompt">No account?</string>
+    <string name="action_sign_up">Sign up</string>
+
+    <!-- Sign up -->
+    <string name="hint_full_name">Full name</string>
+    <string name="hint_phone_number">Phone number</string>
+    <string name="hint_area_name">Area name</string>
+    <string name="signup_heading">Create your account</string>
+    <string name="signup_subtitle">Join your neighbours — hire local help and pass on what you no longer need.</string>
+    <string name="pin_helper_text">We use this to show you what\'s closest. Drag the pin to fine-tune it.</string>
+    <string name="label_your_area">Your area</string>
+    <string name="action_create_account">Create Account</string>
+    <string name="already_have_account_prompt">Already have an account?</string>
+    <string name="action_log_in_lower">Log in</string>
+
+    <!-- Home -->
+    <string name="search_placeholder">Search services and items</string>
+    <string name="section_browse_categories">Browse Categories</string>
+    <string name="section_near_you">Near You</string>
+    <string name="section_recent_listings">Recent Listings</string>
+
+    <!-- Search -->
+    <string name="hint_keyword">Keyword</string>
+
+    <!-- Assistant -->
+    <string name="assistant_title">LocalHand Assistant</string>
+    <string name="assistant_subtitle">Always available, on-device</string>
+    <string name="hint_ask_anything">Ask anything</string>
+    <string name="cd_send">Send</string>
+    <string name="action_view_listing">View listing</string>
+
+    <!-- Create listing -->
+    <string name="label_marketplace">Marketplace</string>
+    <string name="label_service">Service</string>
+    <string name="hint_title">Title</string>
+    <string name="hint_category">Category</string>
+    <string name="hint_condition">Condition</string>
+    <string name="hint_rate">Rate</string>
+    <string name="hint_area">Area</string>
+    <string name="label_description">Description</string>
+    <string name="label_photos">Photos</string>
+    <string name="photos_helper_text">Up to 5 photos. The first one is the cover photo.</string>
+    <string name="action_add">Add</string>
+    <string name="cd_remove_photo">Remove photo</string>
+    <string name="action_post_listing">Post Listing</string>
+
+    <!-- Listing detail -->
+    <string name="action_call">Call</string>
+    <string name="action_whatsapp">WhatsApp</string>
+
+    <!-- Provider profile -->
+    <string name="label_listings">Listings</string>
+    <string name="provider_empty_listings">This user hasn\'t posted anything yet.</string>
+
+    <!-- Profile -->
+    <string name="label_my_listings">My Listings</string>
+    <string name="label_favourites">Favourites</string>
+    <string name="label_dark_mode">Dark Mode</string>
+    <string name="action_sign_out">Sign out</string>
+    <string name="profile_empty_listings">You haven\'t posted anything yet. Tap + to add your first listing.</string>
+
+    <!-- Listing row / cards -->
+    <string name="cd_edit_listing">Edit listing</string>
+    <string name="cd_delete_listing">Delete listing</string>
 </resources>

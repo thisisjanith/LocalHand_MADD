@@ -109,7 +109,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:layout_marginStart="@dimen/lh_gap"
-                    android:text="Favourites"
+                    android:text="@string/label_favourites"
                     android:textAppearance="@style/Lh.Text.CardTitle" />
 
                 <TextView
@@ -135,7 +135,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/lh_section_gap"
             android:layout_marginBottom="@dimen/lh_gap"
-            android:text="My Listings"
+            android:text="@string/label_my_listings"
             android:textAppearance="@style/Lh.Text.SectionHeading" />
 
         <TextView
@@ -143,7 +143,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="@dimen/lh_gap"
-            android:text="You haven't posted anything yet. Tap + to add your first listing."
+            android:text="@string/profile_empty_listings"
             android:textAppearance="@style/Lh.Text.Body"
             android:visibility="gone"
             tools:visibility="visible" />
@@ -183,7 +183,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:layout_marginStart="@dimen/lh_gap"
-                    android:text="Dark Mode"
+                    android:text="@string/label_dark_mode"
                     android:textAppearance="@style/Lh.Text.CardTitle" />
 
                 <com.google.android.material.materialswitch.MaterialSwitch
@@ -222,7 +222,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="@dimen/lh_gap"
-                    android:text="Sign out"
+                    android:text="@string/action_sign_out"
                     android:textAppearance="@style/Lh.Text.CardTitle"
                     android:textColor="@color/lh_danger" />
             </LinearLayout>

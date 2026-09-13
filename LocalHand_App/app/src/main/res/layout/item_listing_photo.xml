@@ -29,7 +29,7 @@
             app:tint="@color/lh_danger"
             android:scaleType="center"
             android:padding="5dp"
-            android:contentDescription="Remove photo" />
+            android:contentDescription="@string/cd_remove_photo" />
     </FrameLayout>
 
 </FrameLayout>

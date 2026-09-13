@@ -22,7 +22,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/lh_gap_nudge"
-        android:text="Add"
+        android:text="@string/action_add"
         android:textAppearance="@style/Lh.Text.Label" />
 
 </LinearLayout>

@@ -20,7 +20,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="end"
-            android:text="Skip"
+            android:text="@string/action_skip"
             android:textColor="@color/lh_muted" />
     </FrameLayout>
 
@@ -45,7 +45,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/lh_screen_padding"
         android:layout_marginEnd="@dimen/lh_screen_padding"
-        android:text="Next" />
+        android:text="@string/action_next" />
 
     <Button
         android:id="@+id/btn_have_account"
@@ -55,7 +55,7 @@
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="@dimen/lh_gap_tiny"
         android:layout_marginBottom="@dimen/lh_gap_large"
-        android:text="I already have an account"
+        android:text="@string/onboarding_have_account"
         android:textColor="@color/lh_muted" />
 
 </LinearLayout>

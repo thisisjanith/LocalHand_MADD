@@ -24,7 +24,7 @@
             android:background="?attr/selectableItemBackgroundBorderless"
             android:src="@drawable/ic_arrow_back"
             android:scaleType="center"
-            android:contentDescription="Back" />
+            android:contentDescription="@string/cd_back" />
 
         <FrameLayout
             android:layout_width="@dimen/lh_avatar_small"
@@ -49,13 +49,13 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="LocalHand Assistant"
+                android:text="@string/assistant_title"
                 android:textAppearance="@style/Lh.Text.CardTitle" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Always available, on-device"
+                android:text="@string/assistant_subtitle"
                 android:textAppearance="@style/Lh.Text.Label" />
         </LinearLayout>
     </LinearLayout>
@@ -106,7 +106,7 @@
             app:boxCornerRadiusBottomEnd="100dp"
             app:boxCornerRadiusTopStart="100dp"
             app:boxCornerRadiusTopEnd="100dp"
-            android:hint="Ask anything">
+            android:hint="@string/hint_ask_anything">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/et_input"
@@ -132,7 +132,7 @@
                 android:src="@drawable/ic_send"
                 app:tint="@color/lh_on_accent"
                 android:scaleType="center"
-                android:contentDescription="Send" />
+                android:contentDescription="@string/cd_send" />
         </FrameLayout>
     </LinearLayout>
 

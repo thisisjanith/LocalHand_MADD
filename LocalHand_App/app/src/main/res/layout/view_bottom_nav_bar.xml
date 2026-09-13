@@ -48,14 +48,14 @@
                 android:layout_height="@dimen/lh_icon_size"
                 android:src="@drawable/ic_home"
                 app:tint="@color/lh_muted"
-                android:contentDescription="Home" />
+                android:contentDescription="@string/nav_home" />
 
             <TextView
                 android:id="@+id/nav_tab_home_label"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="2dp"
-                android:text="Home"
+                android:text="@string/nav_home"
                 android:textAppearance="@style/Lh.Text.NavLabel"
                 android:textColor="@color/lh_muted" />
         </LinearLayout>
@@ -77,14 +77,14 @@
                 android:layout_height="@dimen/lh_icon_size"
                 android:src="@drawable/ic_search"
                 app:tint="@color/lh_muted"
-                android:contentDescription="Search" />
+                android:contentDescription="@string/nav_search" />
 
             <TextView
                 android:id="@+id/nav_tab_search_label"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="2dp"
-                android:text="Search"
+                android:text="@string/nav_search"
                 android:textAppearance="@style/Lh.Text.NavLabel"
                 android:textColor="@color/lh_muted" />
         </LinearLayout>
@@ -113,14 +113,14 @@
                 android:layout_height="@dimen/lh_icon_size"
                 android:src="@drawable/ic_chat"
                 app:tint="@color/lh_muted"
-                android:contentDescription="Ask AI" />
+                android:contentDescription="@string/nav_ask_ai" />
 
             <TextView
                 android:id="@+id/nav_tab_assistant_label"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="2dp"
-                android:text="Ask AI"
+                android:text="@string/nav_ask_ai"
                 android:textAppearance="@style/Lh.Text.NavLabel"
                 android:textColor="@color/lh_muted" />
         </LinearLayout>
@@ -142,14 +142,14 @@
                 android:layout_height="@dimen/lh_icon_size"
                 android:src="@drawable/ic_person"
                 app:tint="@color/lh_muted"
-                android:contentDescription="Profile" />
+                android:contentDescription="@string/nav_profile" />
 
             <TextView
                 android:id="@+id/nav_tab_profile_label"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="2dp"
-                android:text="Profile"
+                android:text="@string/nav_profile"
                 android:textAppearance="@style/Lh.Text.NavLabel"
                 android:textColor="@color/lh_muted" />
         </LinearLayout>
@@ -183,7 +183,7 @@
             android:src="@drawable/ic_add"
             app:tint="@color/lh_on_accent"
             android:scaleType="center"
-            android:contentDescription="Create listing" />
+            android:contentDescription="@string/cd_create_listing" />
     </FrameLayout>
 
 </merge>

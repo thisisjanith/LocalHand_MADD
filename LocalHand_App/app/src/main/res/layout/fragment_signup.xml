@@ -24,14 +24,14 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Create your account"
+            android:text="@string/signup_heading"
             android:textAppearance="@style/Lh.Text.Headline" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/lh_gap_small"
-            android:text="Join your neighbours — hire local help and pass on what you no longer need."
+            android:text="@string/signup_subtitle"
             android:textAppearance="@style/Lh.Text.Body" />
 
         <com.google.android.material.textfield.TextInputLayout
@@ -40,7 +40,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/lh_section_gap"
-            android:hint="Full name">
+            android:hint="@string/hint_full_name">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/et_name"
@@ -56,7 +56,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/lh_gap_large"
-            android:hint="Email">
+            android:hint="@string/hint_email">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/et_email"
@@ -72,7 +72,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/lh_gap_large"
-            android:hint="Phone number">
+            android:hint="@string/hint_phone_number">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/et_phone"
@@ -88,7 +88,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/lh_gap_large"
-            android:hint="Password"
+            android:hint="@string/hint_password"
             app:endIconMode="password_toggle">
 
             <com.google.android.material.textfield.TextInputEditText
@@ -108,7 +108,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Your area"
+                android:text="@string/label_your_area"
                 android:textAppearance="@style/Lh.Text.Label" />
 
             <TextView
@@ -116,7 +116,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="2dp"
                 android:layout_marginBottom="@dimen/lh_gap_small"
-                android:text="We use this to show you what's closest. Drag the pin to fine-tune it."
+                android:text="@string/pin_helper_text"
                 android:textAppearance="@style/Lh.Text.Label"
                 android:textColor="@color/lh_faint" />
 
@@ -143,7 +143,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/lh_gap_large"
-            android:hint="Area name">
+            android:hint="@string/hint_area_name">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/et_area"
@@ -158,7 +158,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/lh_section_gap"
-            android:text="Create Account" />
+            android:text="@string/action_create_account" />
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -172,7 +172,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Already have an account?"
+                android:text="@string/already_have_account_prompt"
                 android:textAppearance="@style/Lh.Text.Body" />
 
             <Button
@@ -180,7 +180,7 @@
                 style="@style/Lh.Button.Text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Log in"
+                android:text="@string/action_log_in_lower"
                 android:textColor="@color/lh_accent" />
         </LinearLayout>
 

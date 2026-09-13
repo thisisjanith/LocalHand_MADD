@@ -36,7 +36,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Service"
+                android:text="@string/label_service"
                 android:textAppearance="@style/Lh.Text.Button" />
 
             <Button
@@ -45,7 +45,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Marketplace"
+                android:text="@string/label_marketplace"
                 android:textAppearance="@style/Lh.Text.Button" />
         </com.google.android.material.button.MaterialButtonToggleGroup>
 
@@ -55,7 +55,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/lh_section_gap"
-            android:hint="Title">
+            android:hint="@string/hint_title">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/et_title"
@@ -70,7 +70,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/lh_gap_large"
-            android:hint="Category"
+            android:hint="@string/hint_category"
             app:endIconMode="dropdown_menu">
 
             <AutoCompleteTextView
@@ -87,7 +87,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/lh_gap_large"
-            android:hint="Rate">
+            android:hint="@string/hint_rate">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/et_price"
@@ -102,7 +102,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/lh_gap_large"
-            android:hint="Condition"
+            android:hint="@string/hint_condition"
             android:visibility="gone"
             tools:visibility="visible"
             app:endIconMode="dropdown_menu">
@@ -121,7 +121,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/lh_gap_large"
-            android:hint="Area">
+            android:hint="@string/hint_area">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/et_locality"
@@ -142,7 +142,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/lh_gap_large"
-            android:hint="Description">
+            android:hint="@string/label_description">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/et_description"
@@ -158,14 +158,14 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/lh_gap_large"
-            android:text="Photos"
+            android:text="@string/label_photos"
             android:textAppearance="@style/Lh.Text.Label" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="2dp"
-            android:text="Up to 5 photos. The first one is the cover photo."
+            android:text="@string/photos_helper_text"
             android:textAppearance="@style/Lh.Text.Label"
             android:textColor="@color/lh_faint" />
 
@@ -184,7 +184,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/lh_section_gap"
-            android:text="Post Listing" />
+            android:text="@string/action_post_listing" />
 
     </LinearLayout>
 </ScrollView>

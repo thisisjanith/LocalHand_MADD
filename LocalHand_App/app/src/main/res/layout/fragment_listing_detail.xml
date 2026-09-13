@@ -62,7 +62,7 @@
                         android:src="@drawable/ic_arrow_back"
                         app:tint="@color/lh_text"
                         android:scaleType="center"
-                        android:contentDescription="Back" />
+                        android:contentDescription="@string/cd_back" />
                 </FrameLayout>
 
                 <FrameLayout
@@ -81,7 +81,7 @@
                         android:background="?attr/selectableItemBackgroundBorderless"
                         android:src="@drawable/ic_favorite_border"
                         android:scaleType="center"
-                        android:contentDescription="Save to favourites" />
+                        android:contentDescription="@string/cd_save_to_favourites" />
                 </FrameLayout>
             </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -242,7 +242,7 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Description"
+                    android:text="@string/label_description"
                     android:textAppearance="@style/Lh.Text.SectionHeading" />
 
                 <TextView
@@ -275,7 +275,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:layout_marginEnd="@dimen/lh_gap"
-            android:text="Call"
+            android:text="@string/action_call"
             app:icon="@drawable/ic_call"
             app:iconTint="@color/lh_text" />
 
@@ -285,7 +285,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="WhatsApp"
+            android:text="@string/action_whatsapp"
             app:icon="@drawable/ic_chat_bubble"
             app:iconTint="@color/lh_on_accent" />
     </LinearLayout>

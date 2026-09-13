@@ -28,7 +28,7 @@
                 android:src="@drawable/ic_arrow_back"
                 app:tint="@color/lh_text"
                 android:scaleType="center"
-                android:contentDescription="Back" />
+                android:contentDescription="@string/cd_back" />
         </FrameLayout>
 
         <LinearLayout
@@ -95,7 +95,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/lh_section_gap"
             android:layout_marginBottom="@dimen/lh_gap"
-            android:text="Listings"
+            android:text="@string/label_listings"
             android:textAppearance="@style/Lh.Text.SectionHeading" />
 
         <TextView
@@ -103,7 +103,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="@dimen/lh_gap"
-            android:text="This user hasn't posted anything yet."
+            android:text="@string/provider_empty_listings"
             android:textAppearance="@style/Lh.Text.Body"
             android:visibility="gone"
             tools:visibility="visible" />

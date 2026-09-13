@@ -161,7 +161,7 @@
                 android:background="?attr/selectableItemBackgroundBorderless"
                 android:scaleType="center"
                 android:src="@drawable/ic_favorite_border"
-                android:contentDescription="Save to favourites" />
+                android:contentDescription="@string/cd_save_to_favourites" />
         </FrameLayout>
 
         <LinearLayout
@@ -180,7 +180,7 @@
                 android:scaleType="center"
                 android:src="@drawable/ic_edit"
                 app:tint="@color/lh_muted"
-                android:contentDescription="Edit listing" />
+                android:contentDescription="@string/cd_edit_listing" />
 
             <ImageButton
                 android:id="@+id/row_delete"
@@ -190,7 +190,7 @@
                 android:scaleType="center"
                 android:src="@drawable/ic_delete"
                 app:tint="@color/lh_danger"
-                android:contentDescription="Delete listing" />
+                android:contentDescription="@string/cd_delete_listing" />
         </LinearLayout>
 
     </LinearLayout>

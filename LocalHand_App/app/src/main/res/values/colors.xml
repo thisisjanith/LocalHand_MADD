@@ -1,14 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- Raw palette tokens (light). Layouts reference the semantic lh_* names
-         below, not these, except where the semantic name is itself the raw
-         value (e.g. lh_accent, which is identical in both themes). -->
+
     <color name="lh_background">#FDF7F2</color>
     <color name="lh_surface">#FFFFFFFF</color>
     <color name="lh_text">#2B2926</color>
-    <!-- Darkened from #6E6A64/#94908A for readability: muted now sits at
-         ~7.3:1 contrast against lh_background (was ~4.9:1) and faint at
-         ~4.6:1 (was ~2.7:1, failing AA for normal-size text). -->
+
+
     <color name="lh_muted">#57534D</color>
     <color name="lh_faint">#726D66</color>
     <color name="lh_border">#E4E0DA</color>
@@ -24,8 +21,7 @@
 
     <color name="lh_transparent">#00000000</color>
 
-    <!-- Per-category tile colours: a wash background paired with a solid
-         icon tint, one pair per Category enum entry. -->
+   
     <color name="lh_cat_repairs">#2F6FED</color>
     <color name="lh_cat_repairs_wash">#1A2F6FED</color>
     <color name="lh_cat_tutoring">#9A5B13</color>

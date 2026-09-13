@@ -20,13 +20,13 @@
             android:layout_width="@dimen/lh_logo_tile"
             android:layout_height="@dimen/lh_logo_tile"
             android:src="@drawable/logo_localhand"
-            android:contentDescription="LocalHand" />
+            android:contentDescription="@string/app_name" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/lh_gap"
-            android:text="LocalHand"
+            android:text="@string/app_name"
             android:textAppearance="@style/Lh.Text.Headline" />
 
         <TextView
@@ -34,7 +34,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/lh_gap_small"
             android:gravity="center"
-            android:text="Services and second-hand goods, right in your area"
+            android:text="@string/login_tagline"
             android:textAppearance="@style/Lh.Text.Body" />
 
         <com.google.android.material.textfield.TextInputLayout
@@ -43,7 +43,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="28dp"
-            android:hint="Email">
+            android:hint="@string/hint_email">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/et_email"
@@ -59,7 +59,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/lh_gap_large"
-            android:hint="Password"
+            android:hint="@string/hint_password"
             app:endIconMode="password_toggle">
 
             <com.google.android.material.textfield.TextInputEditText
@@ -87,7 +87,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/lh_section_gap"
-            android:text="Log In" />
+            android:text="@string/action_log_in" />
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -100,7 +100,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="No account?"
+                android:text="@string/no_account_prompt"
                 android:textAppearance="@style/Lh.Text.Body" />
 
             <Button
@@ -108,7 +108,7 @@
                 style="@style/Lh.Button.Text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Sign up"
+                android:text="@string/action_sign_up"
                 android:textColor="@color/lh_accent" />
         </LinearLayout>
 

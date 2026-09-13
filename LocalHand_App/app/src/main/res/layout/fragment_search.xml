@@ -15,7 +15,7 @@
         android:layout_marginEnd="@dimen/lh_screen_padding"
         android:layout_marginTop="@dimen/lh_gap_large"
         android:layout_marginBottom="@dimen/lh_gap"
-        android:text="Search"
+        android:text="@string/nav_search"
         android:textAppearance="@style/Lh.Text.ScreenTitle" />
 
     <com.google.android.material.textfield.TextInputLayout
@@ -25,7 +25,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/lh_screen_padding"
         android:layout_marginEnd="@dimen/lh_screen_padding"
-        android:hint="Keyword">
+        android:hint="@string/hint_keyword">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/et_query"

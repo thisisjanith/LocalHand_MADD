@@ -20,7 +20,7 @@
         android:layout_height="@dimen/lh_min_touch_target"
         android:background="?attr/selectableItemBackgroundBorderless"
         android:src="@drawable/ic_arrow_back"
-        android:contentDescription="Back"
+        android:contentDescription="@string/cd_back"
         android:scaleType="center" />
 
     <TextView
